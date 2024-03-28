@@ -16,7 +16,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/dentist/:id" element={<Detail />} />
               <Route path="/favs" element={<Favs />} />
-              <Route path="*" element={<h2>Error</h2>}></Route>
+              <Route path="*" element={<h2>404 not found</h2>}></Route>
           
           </Route>
         </Routes>
