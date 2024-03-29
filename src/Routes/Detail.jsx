@@ -1,17 +1,27 @@
 import {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
+import axios from 'axios'
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 const Detail = () => {
 
   const { id }= useParams()
   const [dentistaSelected, setDentistaSelected] = useState({})
   
-  useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
-      .then( res => res.json())
-      .then( res => setDentistaSelected(res))
+  // useEffect(() => {
+  //   axios
+  //   .get(`https://jsonplaceholder.typicode.com/users/${id}`)
+  //   .then( res => setDentistaSelected(res.data))
+  // }, [id]);
 
-  }, [id]);
+
+  useEffect(() => {
+    const getDentistaSelected = async () =>{
+
+    let res = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
+    setDentistaSelected(res.data)
+    }
+    getDentistaSelected()
+  }, [ id ]);
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
   return (
     <>

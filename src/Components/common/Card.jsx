@@ -3,29 +3,36 @@ import { Link } from "react-router-dom";
 
 const Card = ({ dentista }) => {
 
-  const addFav = ()=>{
-    // Aqui iria la logica para agregar la Card en el localStorage
+  const addFav = () => {
+    // Obtener los favoritos actuales del LocalStorage
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    // Verificar si la card ya está en favoritos
+    if (!favorites.includes(dentista.id)) {
+      // Agregar la card a la lista de favoritos
+      const newFavorites = [...favorites, dentista.id];
+      // Actualizar LocalStorage con la nueva lista de favoritos
+      localStorage.setItem('favorites', JSON.stringify(newFavorites));
+    }
   }
 
   return (
     <>
-    <Link to={`/dentist/${dentista.id}`}>
-    <div className="card">
-    
-        {/* En cada card deberan mostrar en name - username y el id */}
-        <img src="../../../public/images/doctor.jpg" className="imgDoc"/>
-        <h1>{dentista.name}</h1>
-        <p>{dentista.username}</p>
-        <p>{dentista.id}</p>
       
-
-        {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-        {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-       
-        <button onClick={addFav} className="favButton">Add fav</button>
-    </div>
-    </Link>
-    
+        <div className="card">
+          <Link to={`/dentist/${dentista.id}`}>
+            {/* Contenido de la card */}
+            <img src="../../../public/images/doctor.jpg" className="imgDoc"/>
+          </Link>
+            <h1>{dentista.name}</h1>
+            <p>{dentista.username}</p>
+            <p>{dentista.id}</p>
+          
+          
+          {/* Botón para agregar a favoritos */}
+          <button onClick={addFav} className="favButton">Add fav</button>
+        </div>
+      
     </>
   );
 };
