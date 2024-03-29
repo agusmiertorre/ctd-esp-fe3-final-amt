@@ -4,10 +4,15 @@ import Contact from "./Routes/Contact";
 import Favs from "./Routes/Favs";
 import Detail from "./Routes/Detail";
 import Layout from "./Components/layout/Layout";
+import { useContextGlobal } from "./Components/utils/global.context";
 
 
 function App() {
+  
+  const {theme} = useContextGlobal()
+
   return (
+    <div className={theme ? 'dark' : 'light'}>
       <BrowserRouter> 
         <Routes>
           <Route element={<Layout />} >
@@ -19,6 +24,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      </div>
   );
 }
 

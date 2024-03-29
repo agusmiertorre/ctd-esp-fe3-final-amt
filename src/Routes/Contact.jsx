@@ -1,5 +1,8 @@
 import React from 'react'
 import Form from '../Components/common/Form'
+import "./contact.css"
+
+
 
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context

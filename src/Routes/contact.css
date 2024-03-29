@@ -1,0 +1,48 @@
+.form-container {
+  background-color: #e6e0c5; /* Fondo claro */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #cc8383; /* Color del borde al enfocar */
+}
+
+.button {
+  background-color: #e6e0c5; /* Botón */
+  color: #3e3742; /* Texto oscuro */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ebc4a9; /* Color de fondo al pasar el ratón */
+}
+
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}
+.send{
+    background-color: #cc8383; /* Botón */
+  color: #3e3742; /* Texto oscuro */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}

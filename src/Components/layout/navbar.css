@@ -1,0 +1,48 @@
+nav {
+    background-color: #e6e0c5; /* Fondo claro */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #3e3742; /* Texto oscuro */
+  }
+  
+  button {
+    background-color: #cc8383; /* Botón */
+    color: #3e3742; /* Texto oscuro */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: #cf4747; /* Botón */
+
+  }
+  
+  .dark {
+    background-color: #3e3742; /* Fondo oscuro */
+  }
+  
+  .light a {
+    color: #825e65; /* Texto claro */
+  }
+  
+  .light button {
+    background-color: #ebc4a9; /* Botón claro */
+    color: #3e3742; /* Texto oscuro */
+  }
+  

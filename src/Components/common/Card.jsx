@@ -23,8 +23,8 @@ const Card = ({ dentista }) => {
           <Link to={`/dentist/${dentista.id}`}>
             {/* Contenido de la card */}
             <img src="../../../public/images/doctor.jpg" className="imgDoc"/>
-          </Link>
             <h1>{dentista.name}</h1>
+            </Link>
             <p>{dentista.username}</p>
             <p>{dentista.id}</p>
           

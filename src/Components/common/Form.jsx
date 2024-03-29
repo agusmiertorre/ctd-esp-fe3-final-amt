@@ -46,6 +46,7 @@ const Form = () => {
           name="nombre"
           value={mensaje.nombre}
           onChange={handleChange}
+          className="input-field"
         />
         <label>Email: </label>
         <input 
@@ -54,8 +55,9 @@ const Form = () => {
           name="email"
           value={mensaje.email}
           onChange={handleChange}
+          className="input-field"
         />
-        <button>Enviar</button>
+        <button className='send'>Enviar</button>
         {err && <p style={{ color: 'red' }}>**Por favor verifique su información nuevamente**</p>}
         {mostrar && <p style={{ color: 'green' }}>**Gracias {mensaje.nombre}, te contactaremos cuando antes vía mail**</p>}
       </form>
